@@ -167,7 +167,7 @@ void automataCaracteres(char palabra[]){
             break;
         }
 
-        if(palabra[contador] == '('){
+        if(palabra[contador] == '(' && contador == 0 ){
             actual = noFinal;
         }
 
@@ -177,13 +177,13 @@ void automataCaracteres(char palabra[]){
             break;
         }
 
-        if(palabra[contador] == ','){
+        if(palabra[contador] == ',' && contador == 0){
             actual = final;
             continuar = false;
             break;
         }
 
-        if(palabra[contador] == '.'){
+        if(palabra[contador] == '.' && contador == 0){
             actual = noFinal1;
         }
 
@@ -251,9 +251,32 @@ void automataOperadores(char palabra[]){
     system("PAUSE");
 }
 
-//void automataPalabraReservada(char palabra[]){
+/*void automataPalabraReservada(char palabra[]){
+    int inicial = 0;
+    int final1 = 1;
+    int final2 = 2;
+    int final3 = 3;
+    int final4 = 4;
+    int final5 = 5;
+    char startEgg[7]="startEgg";
+    int actual = inicial;      
+    
+    
+    int contador = 0;
+    int continuar = true;
+   while(continuar){
+   if(palabra[contador] == '\0'){
+            continuar = false;
+            break;
+        }
+ if(palabra[] == "startEgg"){
+            continuar = false;
+            break;
+        }
+
+   }
    
-//}
+*/}
 
 void automataConstantes(char palabra[]){
     int inicial = 0;
